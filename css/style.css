@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -33,7 +36,7 @@
 
 .header  .menu  li  a{
     display: block;
-    padding: 17px;
+    padding: 17px 25px;
     text-decoration: none;
     font-size: 15px;
 }
@@ -41,25 +44,204 @@
 .submenu{
     display: none;
     position: absolute;
-    background-color:  rgb(0, 110, 255);
+    background-color:  rgb(1, 92, 211);
     top: 50px;
-    min-width: 90%;
+    left: -1%;
+    text-align: center;
+    width: 103%;
+    border-radius: 0 0 10px 10px;
 }
+
+.submenu li:hover {
+    background-color: rgb(0, 47, 148);
+
+}
+
 
 li:hover  .submenu, .menu {
     display: block;
 }
 
 /* **********
- Baixo   
+ Apresentação
+********** */
+
+.conhecaCursos {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color:  rgb(0, 110, 255);
+    box-shadow: 2px 2px 3px black;
+}
+
+.conhecaCursos input {
+    width: 30%;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+    margin-left: 15px;
+}
+
+.conhecaCursos .bx-search-alt-2 {
+    margin-left: -7px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.conhecaCursos a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+.conhecaCursos .bxs-cart-alt {
+    font-size: 30px;
+    margin-left: 30px;
+    padding: 0;
+    border: 0;
+    color: black;
+}
+
+.conhecaCursos .bxs-cart-alt:hover {
+    color: rgb(255, 255, 255);
+}
+
+.conhecaCursos .login {
+    font-weight: bold;
+    margin-left: 3%;
+    padding: 10px 25px;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.conhecaCursos .cadastrar {
+    margin-left: 3%;
+    padding: 10px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.conhecaCursos .bx-world {
+    border: 0;
+    padding: 0;
+    font-size: 30px;
+    margin-left: 3%;
+    color: black;
+}
+
+.conhecaCursos .bx-world:hover {
+    color: white;
+}
+
+/* **********
+ Cursos 
+********** */
+
+
+.content{
+    width: 70%;
+    height: 79rem;
+    margin: 2% 5% 0 3%;
+}
+
+
+.box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+
+.textos {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.textos h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.textos h1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.textos h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.textos p {
+    width: 100%;
+    color: black;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+
+
+
+/* **********
+ Mais cursos
+********** */
+
+
+.maisCursos {
+    margin-left: 42%;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+    background-image: linear-gradient(90deg, rgb(0, 4, 255), rgb(0, 81, 255));
+    border: 1px solid black;
+}
+
+.maisCursos.sumir {
+    display: none;
+}
+
+
+.box2 {
+    display: none;
+    transition: all 800ms ease;
+    margin-top: 7%;
+}
+
+.secundaBox {
+    display: flex;
+    margin-bottom: 6%;
+}
+
+
+.box2.mais {
+    display: block;
+    transition:  0.3s ease;
+}
+
+
+/* **********
+ Botões de cursos 
 ********** */
 
 .container{
     display: flex;
+    width: 100%;
 }
 
 .navbar{
-    width: 50%;
+    width: 20%;
     padding: 30px;
 }
 
@@ -72,6 +254,11 @@ li:hover  .submenu, .menu {
     background-color: rgb(1, 92, 211);
     text-align: center;
     margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li:hover {
+    background-color: rgb(0, 0, 173);
 }
 
 .navbar ul li a{
@@ -79,26 +266,45 @@ li:hover  .submenu, .menu {
     text-decoration: none;
 }
 
-.content{
-    margin: 30px;
-}
 
-.content h2{
-    color: black;
-    margin-bottom: 10px;
-}
-
-.content p {
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-}
-
-.footer{
+footer {
     width: 100%;
-    height: 60px;
-    background-color: rgb(1, 92, 211);
-    text-align: center;
-    padding: 20px;
-    font-size: 15px;
-    text-transform: uppercase;
+    height: 50px;
+    margin-top: 3%;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 2px -2px 4px black;
+    background-image: linear-gradient(90deg, rgb(0, 4, 255), rgb(0, 81, 255));
+}
+
+
+@media(max-width: 700px){
+    .box  {
+        display: block;
+        margin-left: 15%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .header {
+        display: none;
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar {
+        display: none
+    }
+
+    .secundaBox {
+        display: block;
+        margin-left: 15%;
+    }
 }
